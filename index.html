@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>太阳系</title>
+    <style>
+        *{margin:0;padding:0}
+        html,body{
+            width:100%; height:100%;
+        }
+        #canvas3d{
+            width:100%; height:100%;
+            border:0;
+            cursor:pointer;
+            overflow:hidden;
+        }
+
+        .control{
+            position: fixed; top: 10px; left: 10px;
+            width: 200px; heigth: 30px;
+            opacity: 0.5;
+            font-family: "Courier New";
+            font-size: 0;
+            transition:opacity 1s;
+        }
+        .hide{
+            opacity: 0;
+        }
+        .control:hover{
+            opacity: 1;
+        }
+        .control .btn{
+            display: inline-block;
+            width: 26px; height: 26px;
+            margin: 0 5px;
+            background: #000;
+            font-size: 20px;
+            line-height: 20px; text-align: center;
+            color: #fff;
+            outline: none;
+        }
+        .control .btn:nth-child(3){
+            width: 66px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="control">
+    <button id="speedUp" class="btn">+</button>
+    <button id="shiftDown" class="btn">-</button>
+    <button id="hide" class="btn">hide</button>
+</div>
+<div id="canvas3d"></div>
+
+<script src="js/three.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
